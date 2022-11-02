@@ -31,7 +31,10 @@ function digit2Roman(d)
   }   
   else if ( d < 40 ) {
      retVal = "X".repeat(d/10)
-  }   
+  } 
+  else if ( d == 40) {
+    retVal = "XL"
+  }     
  else if ( d < 90 ) {
    console.log(d)
      retVal = "L"+ "X".repeat((d-50)/10)
@@ -43,6 +46,9 @@ function digit2Roman(d)
    console.log(d)
      retVal = "C".repeat((d)/100)
   }    
+  else if ( d == 400) {
+    retVal = "CD"
+  }       
  else if ( d == "500")    {
    retVal = "D"
  }
@@ -51,7 +57,7 @@ function digit2Roman(d)
      retVal = "D" + "C".repeat((d-500)/100)
   }  
   else if ( d == "900")    {
-   retVal = "DM"
+   retVal = "CM"
   }  
   else if ( d < "4000")    {
    retVal = "M".repeat(d/1000)
